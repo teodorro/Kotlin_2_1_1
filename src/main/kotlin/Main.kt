@@ -33,7 +33,7 @@ fun calcAfterCommission(cardType: String, thisMonthTransfers: Int, transferSize:
     return when {
         cardType == "Mastercard" || cardType == "Maestro" -> calcMastercardMaestro(thisMonthTransfers, transferSize)
         cardType == "Visa" || cardType == "Мир" -> calcVisaPeace(transferSize)
-        else -> -1//transferSize
+        else -> transferSize
     }
 }
 
